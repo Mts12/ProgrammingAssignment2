@@ -1,5 +1,5 @@
 ## [Overview]
-## This source provides method to avoid computing 
+## This code provides method to avoid computing 
 ## the same inverse matrix which was computed before.
 ##
 ## [Restriction]
@@ -7,11 +7,11 @@
 ##
 
 
-## This function manages matrix and inverse of the matrix.
+## This function creates matrix that can cache its inverse matrix.
 makeCacheMatrix <- function(x = matrix()) {
     x_inv <- NULL
     
-    ## Register a matrix which should be inversed.
+    ## Register a matrix which should be inverted.
     setMatrix <- function(y){
         x <<- y
         x_inv <<- NULL
@@ -22,7 +22,7 @@ makeCacheMatrix <- function(x = matrix()) {
         x
     }
     
-    ## Cache a inverse matrix.
+    ## Cache an inverse matrix.
     setInvMatrix <- function(y_inv){
         x_inv <<- y_inv
     }
